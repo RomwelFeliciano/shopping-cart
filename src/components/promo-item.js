@@ -6,8 +6,8 @@ export default function PromoItem({ promo, addToCart, cartItem }) {
 
   return (
     <>
-      {itemType.map((iType) => (
-        <div className="flex items-center gap-3 pt-3">
+      {itemType.map((iType, index) => (
+        <div className="flex items-center gap-3 pt-3" key={index}>
           <h2 className="w-24 capitalize">{iType}s:</h2>
           {promo.items
             .filter((item) => item.itemType === iType)
